@@ -39,6 +39,8 @@ libext2_profile_cflags := -O2 -g -W -Wall \
 	-DHAVE_SYS_TIME_H \
 	-DHAVE_SYSCONF
 
+libext2_profile_cflags += -fno-strict-aliasing
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(libext2_profile_src_files)
@@ -135,6 +137,8 @@ e2fsck_cflags := -O2 -g -W -Wall \
 	-DENABLE_HTREE=1 \
 	-DHAVE_SYS_TIME_H \
 	-DHAVE_SYSCONF
+
+e2fsck_cflags += -fno-strict-aliasing
 
 include $(CLEAR_VARS)
 
